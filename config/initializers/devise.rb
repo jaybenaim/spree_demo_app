@@ -1,1 +1,1 @@
-config.secret_key = ENV['DEVISE_SECRET_KEY'] if Rails.env.production?
+Devise.secret_key = ENV['DEVISE_SECRET_KEY']
