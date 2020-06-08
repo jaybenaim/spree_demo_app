@@ -1,5 +1,25 @@
 <% if spree_navigation_data.any? %>
   <ul class="nav h-100 main-nav-bar">
+    <li class="navbar main-nav-bar-dropdown main-nav-bar-category">
+      <a href="#" class="p-2 main-nav-bar-item main-nav-bar-category-button">Category 1</a>
+      <div class="w-100 shadow main-nav-bar-category-dropdown">
+        <div class="container p-0 d-flex justify-content-xl-around mx-auto">
+          <div class="row">
+            <div class="category-links">
+              <div class="category-links-header text-uppercase">
+                Category 1
+              </div>
+
+              <ul class="pl-0">
+                <li>
+                  <a href="#" class="text-uppercase main-nav-bar-category-links">Link 1</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
     <% spree_navigation_data.each do |root| %>
       <li class="navbar main-nav-bar-dropdown main-nav-bar-category">
         <%= link_to root[:title], root[:url], class: "p-2 main-nav-bar-item main-nav-bar-category-button" %>
